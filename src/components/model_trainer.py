@@ -51,7 +51,7 @@ class ModelTrainer:
             }
 
             model_report=self.evaluate_models(
-                X_train,y_trian,X_test,y_test
+                X_train,y_trian,X_test,y_test,models
             )
 
             best_model_score=max(sorted(model_report.values()))
@@ -69,7 +69,6 @@ class ModelTrainer:
             )
 
             return best_model_score
-
 
         except Exception as e:
             raise CustomException(e,sys)

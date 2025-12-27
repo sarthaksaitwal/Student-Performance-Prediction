@@ -20,7 +20,7 @@ class DataTransformationConfig:
 
 class DataTransformation:
     def __init__(self):
-        self.data_transforamtion_config=DataTransformationConfig()
+        self.data_transformation_config=DataTransformationConfig()
     
     def get_data_transformer_object(self):
         try:
@@ -46,7 +46,7 @@ class DataTransformation:
 
             cat_pipeline=Pipeline(
                 steps=[
-                    ("imputer",SimpleImputer(strategy="most-frequent")),
+                    ("imputer",SimpleImputer(strategy="most_frequent")),
                     ("one_hot_encoder",OneHotEncoder()),
                     ("scaler",StandardScaler(with_mean=False))
                 ]
