@@ -1,3 +1,4 @@
 pandas
 numpy
 dill
+scikit-learn
